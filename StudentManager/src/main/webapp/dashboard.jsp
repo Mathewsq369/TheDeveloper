@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Chinese Language Course</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="/CSS/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
 </head>
 <body>
     <div class="sidebar">
