@@ -14,7 +14,7 @@
             <h2>Course Manager</h2>
         </div>
         <h3>Login</h3>
-        <form action="login" method="post">
+        <form action="/login" method="post">
             <div class="form-group">
                 <label for="instructor-id">Instructor ID</label>
                 <input type="text" name="instructor-id" placeholder="Enter your instructor ID" required>

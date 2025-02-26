@@ -16,6 +16,11 @@ import com.studentmanager.services.LoginService;
  */
 @WebServlet(name = "loginServlet", urlPatterns = {"/loginServlet"})
 public class loginServlet extends HttpServlet {
+    
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/JSP/login.jsp").forward(request, response);
+    }
    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -27,11 +32,11 @@ public class loginServlet extends HttpServlet {
         if(isvaliduser){
             HttpSession session = request.getSession();
             session.setAttribute("user",instructorID);
-            response.sendRedirect("dashboard.jsp");
+            response.sendRedirect("/JSP/dashboard.jsp");
         }
         else{
             request.setAttribute("errorMessage","Invalid instructor Id or password");
         }
-        request.getRequestDispatcher("login.jsp").forward(request, response);
+        request.getRequestDispatcher("/JSP/login.jsp").forward(request, response);
     }
 }
