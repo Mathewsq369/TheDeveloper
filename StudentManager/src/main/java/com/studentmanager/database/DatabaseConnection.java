@@ -2,7 +2,6 @@ package com.studentmanager.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class DatabaseConnection {
     private static Connection con = null;
@@ -12,34 +11,13 @@ public class DatabaseConnection {
     private static final String USER = "root";
     private static final String PASSWORD = "m9r19db";
 
-    static {
-        try {
-            // Load MySQL JDBC Driver
+    public static Connection getConnection(){
+        try{
             Class.forName("org.mariadb.jdbc.Driver");
-
-            // Establish Connection
-            con = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("Database connection established successfully.");
-
-        } catch (ClassNotFoundException e) {
-            System.err.println("MySQL JDBC Driver not found!");
+            return DriverManager.getConnection(URL,USER,PASSWORD);
+        }catch(Exception e){
             e.printStackTrace();
-        } catch (SQLException e) {
-            System.err.println("Failed to establish database connection!");
-            e.printStackTrace();
+            return null;
         }
-    }
-
-    public static Connection getConnection() {
-        if (con == null) {
-            try {
-                con = DriverManager.getConnection(URL, USER, PASSWORD);
-                System.out.println("Reconnecting to the database...");
-            } catch (SQLException e) {
-                System.err.println("Database reconnection failed!");
-                e.printStackTrace();
-            }
-        }
-        return con;
     }
 }
