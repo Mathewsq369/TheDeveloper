@@ -39,5 +39,6 @@ public class loginServlet extends HttpServlet {
         else{
             request.setAttribute("errorMessage","Invalid instructor Id or password");
         }
+        response.getRedirect("login.jsp");
     }
 }
