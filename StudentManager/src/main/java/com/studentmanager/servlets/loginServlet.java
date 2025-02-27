@@ -34,7 +34,7 @@ public class loginServlet extends HttpServlet {
         if(isvaliduser){
             HttpSession session = request.getSession();
             session.setAttribute("user",instructorID);
-            response.sendRedirect("/dashboard.jsp");
+            response.sendRedirect("dashboard.jsp");
         }
         else{
             request.setAttribute("errorMessage","Invalid instructor Id or password");
