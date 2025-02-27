@@ -8,6 +8,13 @@
     <link rel="stylesheet" type="text/css" href="dashboard.css">
 </head>
 <body>
+    <%
+        if(session.getAttribute("user") == null)
+        {
+            response.sendRedirect("login.jsp");
+        }
+    }
+    %>
     <div class="sidebar">
         <div>
             <div class="logo">
