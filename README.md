@@ -5,40 +5,135 @@
 
 ```
 StudentManager/
-├── Web Pages/
-│   ├── WEB-INF/
-│   │   ├── lib/
-│   │   │   ├── mariadb-java-client-3.5.2.jar
-│   │   ├── css/
-│   │   ├── js/
-│   │   ├── beans.xml
-│   │   ├── web.xml
-|   |   |─── jsp/ 
-│   |       ├── attendance.jsp
-│   |       ├── dashboard.jsp
-│   |       ├── registration.jsp
-│
-├── Source Packages/
-│   ├── com.studentmanager.dao/
-│   │   ├── UserDAO.java
-│   ├── com.studentmanager.database/
-│   │   ├── DatabaseConnection.java
-│   ├── com.studentmanager.services/
-│   │   ├── LoginService.java
-│   ├── com.studentmanager.servlets/
-│   │   ├── LoginServlet.java
-│   ├── com.studentmanager.filters/   # New folder for request/response filters
-│   │   ├── AuthenticationFilter.java
-│   │   ├── CORSFilter.java
-│   ├── com.studentmanager.features/  # New folder for additional features
-│   │   ├── ExportData.java
-│   │   ├── NotificationService.java
-│
-├── Dependencies/
-│   ├── JDK 17 (Default)
-│
-├── Project Files/
-│   ├── pom.xml
+├── nb-configuration.xml
+├── pom.xml
+├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       ├── mycompany
+│       │       │   └── studentmanager
+│       │       │       ├── JakartaRestConfiguration.java
+│       │       │       └── resources
+│       │       │           └── JakartaEE10Resource.java
+│       │       └── studentmanager
+│       │           ├── dao
+│       │           │   └── UserDAO.java
+│       │           ├── database
+│       │           │   └── DatabaseConnection.java
+│       │           ├── services
+│       │           │   └── LoginService.java
+│       │           ├── servlets
+│       │           │   └── loginServlet.java
+│       │           └── studentmanager
+│       │               ├── JakartaRestConfiguration.java
+│       │               ├── resources
+│       │               │   └── JakartaEE10Resource.java
+│       │               └── servlets
+│       ├── resources
+│       │   ├── config.properties
+│       │   └── META-INF
+│       │       └── persistence.xml
+│       └── webapp
+│           ├── attendance.css
+│           ├── attendance.jsp
+│           ├── dashboard.css
+│           ├── dashboard.jsp
+│           ├── login.css
+│           ├── login.jsp
+│           ├── META-INF
+│           │   └── context.xml
+│           ├── registration.css
+│           ├── registration.jsp
+│           ├── results.css
+│           ├── results.jsp
+│           ├── settings.css
+│           ├── settings.jsp
+│           └── WEB-INF
+│               ├── beans.xml
+│               ├── lib
+│               │   └── mariadb-java-client-3.5.2.jar
+│               └── web.xml
+└── target
+    ├── classes
+    │   ├── com
+    │   │   ├── mycompany
+    │   │   │   └── studentmanager
+    │   │   │       ├── JakartaRestConfiguration.class
+    │   │   │       └── resources
+    │   │   │           └── JakartaEE10Resource.class
+    │   │   └── studentmanager
+    │   │       ├── dao
+    │   │       │   └── UserDAO.class
+    │   │       ├── database
+    │   │       │   └── DatabaseConnection.class
+    │   │       ├── services
+    │   │       │   └── LoginService.class
+    │   │       ├── servlets
+    │   │       │   └── loginServlet.class
+    │   │       └── studentmanager
+    │   │           ├── JakartaRestConfiguration.class
+    │   │           └── resources
+    │   │               └── JakartaEE10Resource.class
+    │   ├── config.properties
+    │   └── META-INF
+    │       └── persistence.xml
+    ├── generated-sources
+    │   └── annotations
+    ├── maven-archiver
+    │   └── pom.properties
+    ├── maven-status
+    │   └── maven-compiler-plugin
+    │       ├── compile
+    │       │   └── default-compile
+    │       │       ├── createdFiles.lst
+    │       │       └── inputFiles.lst
+    │       └── testCompile
+    │           └── default-testCompile
+    │               └── inputFiles.lst
+    └── StudentManager-1.0-SNAPSHOT
+        ├── attendance.css
+        ├── attendance.jsp
+        ├── dashboard.css
+        ├── dashboard.jsp
+        ├── login.css
+        ├── login.jsp
+        ├── META-INF
+        │   └── context.xml
+        ├── registration.css
+        ├── registration.jsp
+        ├── results.css
+        ├── results.jsp
+        ├── settings.css
+        ├── settings.jsp
+        └── WEB-INF
+            ├── beans.xml
+            ├── classes
+            │   ├── com
+            │   │   ├── mycompany
+            │   │   │   └── studentmanager
+            │   │   │       ├── JakartaRestConfiguration.class
+            │   │   │       └── resources
+            │   │   │           └── JakartaEE10Resource.class
+            │   │   └── studentmanager
+            │   │       ├── dao
+            │   │       │   └── UserDAO.class
+            │   │       ├── database
+            │   │       │   └── DatabaseConnection.class
+            │   │       ├── services
+            │   │       │   └── LoginService.class
+            │   │       ├── servlets
+            │   │       │   └── loginServlet.class
+            │   │       └── studentmanager
+            │   │           ├── JakartaRestConfiguration.class
+            │   │           └── resources
+            │   │               └── JakartaEE10Resource.class
+            │   ├── config.properties
+            │   └── META-INF
+            │       └── persistence.xml
+            ├── lib
+            │   └── mariadb-java-client-3.5.2.jar
+            └── web.xml
 ```
 
 ## Thorough Breakdown of the Project Structure
