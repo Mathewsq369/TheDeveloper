@@ -59,7 +59,7 @@ StudentManager/
 ```
 
 ## Features
-- **User Authentication**: Login system for students and instructors.
+- **User Authentication**: Login system for administrators and instructors.
 - **Attendance Management**: Mark and track student attendance.
 - **Results Management**: Upload and view student results.
 - **User Registration**: Admin can register students and instructors.
