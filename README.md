@@ -55,28 +55,7 @@ StudentManager/
 │               ├── lib
 │               │   └── mariadb-java-client-3.5.2.jar
 │               └── web.xml
-└── target
-    └── classes
-        └── com
-            ├── mycompany
-            │   └── studentmanager
-            │       ├── JakartaRestConfiguration.class
-            │       └── resources
-            │           └── JakartaEE10Resource.class
-            └── studentmanager
-                ├── dao
-                │   └── UserDAO.class
-                ├── database
-                │   └── DatabaseConnection.class
-                ├── services
-                │   └── LoginService.class
-                ├── servlets
-                │   └── loginServlet.class
-                └── studentmanager
-                    ├── JakartaRestConfiguration.class
-                    ├── resources
-                    │   └── JakartaEE10Resource.class
-                    └── servlets
+
 ```
 
 ## Features
