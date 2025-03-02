@@ -8,6 +8,13 @@
     <link rel="stylesheet" type="text/css" href="results.css">
 </head>
 <body>
+    <%
+        response.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
+        if(session.getAttribute("user") == null)
+        {
+            response.sendRedirect("login.jsp");
+        }
+    %>
     <div class="sidebar">
         <div>
             <div class="logo">
