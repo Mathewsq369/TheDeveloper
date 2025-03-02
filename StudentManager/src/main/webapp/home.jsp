@@ -18,7 +18,7 @@
         <div>
             <div class="logo">
                 <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Logo">
-                <h2>${user}</h2>
+                <h2>Course Manager</h2>
             </div>
             <a href="#" class="nav-item active"><i class="fas fa-tachometer-alt"></i> Home</a>
             <a href="attendance.jsp" class="nav-item"><i class="fas fa-calendar-check"></i> Attendance Management</a>
