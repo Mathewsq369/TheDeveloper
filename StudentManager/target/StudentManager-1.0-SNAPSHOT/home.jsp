@@ -38,7 +38,7 @@
         <div class="content">
             <h1>Welcome ${user}</h1>
             <div class="card">
-                <h3>Class Timetable</h3>
+                <h3>Level 1 to 5 Class Timetable</h3>
                 <table class="timetable">
                     <thead>
                         <tr>
@@ -49,24 +49,19 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>08:00 AM - 09:30 AM</td>
-                            <td>Chinese Grammar 101</td>
-                            <td>Room A1</td>
+                            <td>07:00 AM - 09:00 AM</td>
+                            <td>MORNING CLASS</td>
+                            <td>LANGUAGE LAB (FASS)</td>
                         </tr>
                         <tr>
-                            <td>10:00 AM - 11:30 AM</td>
-                            <td>Pronunciation Practice</td>
-                            <td>Room B2</td>
+                            <td>12:00 PM - 14:00 PM</td>
+                            <td>AFTERNOON CLASS</td>
+                            <td>LANGUAGE LAB (FASS)</td>
                         </tr>
                         <tr>
-                            <td>01:00 PM - 02:30 PM</td>
-                            <td>Listening and Speaking</td>
-                            <td>Room C3</td>
-                        </tr>
-                        <tr>
-                            <td>03:00 PM - 04:30 PM</td>
-                            <td>Chinese Culture and History</td>
-                            <td>Room D4</td>
+                            <td>16:00 PM - 18:00 PM</td>
+                            <td>EVENING CLASS</td>
+                            <td>LANGUAGE LAB (FASS)</td>
                         </tr>
                     </tbody>
                 </table>
