@@ -23,6 +23,8 @@
             <a href="#" class="nav-item active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
             <a href="attendance.jsp" class="nav-item"><i class="fas fa-calendar-check"></i> Attendance Management</a>
             <a href="results.jsp" class="nav-item"><i class="fas fa-chart-bar"></i> Results Management</a>
+        </div>
+        <div class="settings">
             <a href="settings.jsp" class="nav-item"><i class="fas fa-cog"></i> Settings</a>
         </div>
     </div>

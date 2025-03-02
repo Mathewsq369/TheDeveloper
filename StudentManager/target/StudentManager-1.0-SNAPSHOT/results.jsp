@@ -110,11 +110,8 @@
             <p> <%=message%></p>
             <%
             }
-            %>
+    %>
         </div>
-            }
-            
-            %>
             <div class="card">
             <h3>Results Overview</h3>
             <p>View student performance and generate reports.</p>

@@ -13,13 +13,12 @@
         {
             response.sendRedirect("login.jsp");
         }
-    }
     %>
     <div class="sidebar">
         <div>
             <div class="logo">
                 <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Logo">
-                <h2>Course Manager</h2>
+                <h2>Welcome %{user}</h2>
             </div>
             <a href="dashboard.jsp" class="nav-item"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
             <a href="#" class="nav-item active"><i class="fas fa-calendar-check"></i> Attendance Management</a>

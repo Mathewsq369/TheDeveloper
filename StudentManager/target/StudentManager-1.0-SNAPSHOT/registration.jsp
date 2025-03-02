@@ -13,7 +13,6 @@
         {
             response.sendRedirect("login.jsp");
         }
-    }
     %>
     <div class="register-container">
         <div class="logo">
