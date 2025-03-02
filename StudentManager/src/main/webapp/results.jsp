@@ -5,16 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results Management - Chinese Language Course</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="results.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .logo h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            padding: 10px 0;
+            margin: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .nav-item i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .nav-item.active {
+            background-color: #0056b3;
+            font-weight: bold;
+        }
+        .nav-item:hover {
+            background-color: #004494;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .settings {
+            margin-top: auto;
+        }
+    </style>
 </head>
 <body>
-    <%
-        if(session.getAttribute("user") == null)
-        {
-            response.sendRedirect("login.jsp");
-        }
-    }
-    %>
     <div class="sidebar">
         <div>
             <div class="logo">
@@ -32,10 +91,31 @@
     <div class="content">
         <h1>Results Management</h1>
         <div class="card">
-            <h3>Add Results</h3>
-            <p>Enter and update exam scores for students.</p>
+            <h3>Add  student Results</h3>
+            <p> <b>Enter and update exam scores for students</B>.</p>
+            <form  class="card" action="addresults" method="post">
+ <label for=" student id">Student ID: </label> 
+ <input type="text" name="id"  placeholder=" Enter StudentID"required><br> </br>
+ <label for="student name" >Student name: </label>
+ <input type="Text" name="name"  placeholder="Enter name"required><br></Br>                 
+ <label for="student score">score: </label>
+ <input type="number" name="score" placeholder="Enter score"> <br></br>
+ <input type="submit">
+  </form>
+   <%
+     String message = (String) request.getAttribute("message"); 
+            if(message!=null)
+            {
+            %>
+            <p> <%=message%></p>
+            <%
+            }
+            %>
         </div>
-        <div class="card">
+            }
+            
+            %>
+            <div class="card">
             <h3>Results Overview</h3>
             <p>View student performance and generate reports.</p>
         </div>
