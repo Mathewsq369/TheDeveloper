@@ -8,13 +8,6 @@
     <link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <body>
-    <%
-        response.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
-        if(session.getAttribute("user") == null)
-        {
-            response.sendRedirect("login.jsp");
-        }
-    %>
     <div class="login-container">
         <div class="logo">
             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Logo">
