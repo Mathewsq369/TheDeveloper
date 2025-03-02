@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Chinese Language Course</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
     <%
@@ -18,9 +18,9 @@
         <div>
             <div class="logo">
                 <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Logo">
-                <h2>Course Manager</h2>
+                <h2>${user}</h2>
             </div>
-            <a href="#" class="nav-item active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="#" class="nav-item active"><i class="fas fa-tachometer-alt"></i> Home</a>
             <a href="attendance.jsp" class="nav-item"><i class="fas fa-calendar-check"></i> Attendance Management</a>
             <a href="results.jsp" class="nav-item"><i class="fas fa-chart-bar"></i> Results Management</a>
         </div>
@@ -35,9 +35,9 @@
             </div>
         </div>
         <div class="content">
-            <h1>Dashboard</h1>
+            <h1>Welcome ${user}</h1>
             <div class="card">
-                <h3>Today's Class Timetable</h3>
+                <h3>Class Timetable</h3>
                 <table class="timetable">
                     <thead>
                         <tr>

@@ -20,7 +20,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Logo">
                 <h2>Course Manager</h2>
             </div>
-            <a href="dashboard.jsp" class="nav-item"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="home.jsp" class="nav-item"><i class="fas fa-tachometer-alt"></i> Home</a>
             <a href="attendance.jsp" class="nav-item"><i class="fas fa-calendar-check"></i> Attendance Management</a>
             <a href="results.jsp" class="nav-item"><i class="fas fa-chart-bar"></i> Results Management</a>
         </div>
