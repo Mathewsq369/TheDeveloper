@@ -38,8 +38,8 @@ StudentManager/
 │       └── webapp
 │           ├── attendance.css
 │           ├── attendance.jsp
-│           ├── dashboard.css
-│           ├── dashboard.jsp
+│           ├── home.css
+│           ├── home.jsp
 │           ├── login.css
 │           ├── login.jsp
 │           ├── META-INF
