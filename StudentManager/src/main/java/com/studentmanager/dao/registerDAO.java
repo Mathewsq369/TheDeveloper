@@ -11,20 +11,21 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import com.studentmanager.services.RegisterService;
 
 /**
  *
  * @author s1gm9
  */
 public class registerDAO {
-    public static List<register> getAllregister(){
-        List<register> registers=new ArrayList<>();
+    public static List<RegisterService> getAllregister(){
+        List<RegisterService> registers=new ArrayList<>();
         try(
             Connection con = DatabaseConnection.getConnection();
             Statement ps=con.createStatement();
             ResultSet rs=ps.executeQuery("SELECT * FROM register")){
             while(rs.next()){
-                registers.add(new register(rs.getInt("instructor_id"),rs.getString("fullname"),rs.getString("email"),rs.getString("password"),rs.getString("confirm_password")));
+                registers.add(new RegisterService(rs.getInt("instructor_id"),rs.getString("fullname"),rs.getString("email"),rs.getString("password"),rs.getString("confirm_password")));
             }
         }catch(Exception e){
             e.printStackTrace();
