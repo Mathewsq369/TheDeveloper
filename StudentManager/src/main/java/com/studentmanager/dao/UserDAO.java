@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import com.studentmanager.database.DatabaseConnection;
 
 public class UserDAO {
@@ -13,10 +14,10 @@ public class UserDAO {
         this.con = DatabaseConnection.getConnection();
     }
 
-    public boolean checkCredentials(String username, String password) {
+    public boolean checkCredentials(String instructorID, String password) {
         String sql = "SELECT * FROM users WHERE instructorID = ? AND password = ?";
         try (PreparedStatement ps = con.prepareStatement(sql)) {
-            ps.setString(1, username);
+            ps.setString(1, instructorID);
             ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
             return rs.next(); // Returns true if credentials are found
