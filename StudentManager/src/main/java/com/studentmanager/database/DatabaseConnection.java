@@ -9,7 +9,7 @@ public class DatabaseConnection {
     // Database Credentials (Update if needed!)
     private static final String URL = "jdbc:mariadb://localhost:3306/StudentManager";
     private static final String USER = "root";
-    private static final String PASSWORD = "seth2019";
+    private static final String PASSWORD = "m9r19db";
 
     public static Connection getConnection(){
         try{

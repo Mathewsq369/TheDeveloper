@@ -4,6 +4,7 @@
  */
 package com.studentmanager.servlets;
 
+import com.studentmanager.dao.registerDAO;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -11,6 +12,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.List;
+import com.studentmanager.services.RegisterService;
 
 /**
  *
@@ -20,14 +22,14 @@ import java.util.List;
 public class RegisterServlet extends HttpServlet {
 @Override
 protected void doPost(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
-        String instructorId=request.getParameter("instructor_id");
-        if(instructorId!=null && !instructorId.isEmpty()){
+        String instructorID=request.getParameter("instructor-id");
+        if(instructorID!=null && !instructorID.isEmpty()){
             try{
-                int myInt=Integer.parseInt(instructorId);
+                int myInt=Integer.parseInt(instructorID);
                 String fullname=request.getParameter("fullname");
                 String email=request.getParameter("email");
                 String password=request.getParameter("password");
-                String confirmPass=request.getParameter("confirm_password");
+                String confirmPass=request.getParameter("confirmPassword");
                 registerDAO.registerUser(myInt, fullname, email, password, confirmPass);
                 response.sendRedirect("registers");
             }catch(NumberFormatException e){
@@ -38,8 +40,9 @@ protected void doPost(HttpServletRequest request,HttpServletResponse response)th
             response.sendError(HttpServletResponse.SC_BAD_REQUEST,"Missing instructor id parameter");
         }  
     }
+@Override
      protected void doGet(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
-        List<register> registerList=registerDAO.getAllregister();
+        List<RegisterService> registerList=registerDAO.getAllregister();
         request.setAttribute("registerList",registerList);
         
         request.getRequestDispatcher("registerList.jsp").forward(request, response);
