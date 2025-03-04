@@ -93,5 +93,5 @@ StudentManager/
 - 
 
 ## License
-This project is licensed under the MIT License 
+This project is licensed under the Apache Licence 2.0 
 

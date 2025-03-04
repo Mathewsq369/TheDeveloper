@@ -15,7 +15,7 @@ public class UserDAO {
     }
 
     public boolean checkCredentials(String instructorID, String password) {
-        String sql = "SELECT * FROM users WHERE instructorID = ? AND password = ?";
+        String sql = "SELECT * FROM users WHERE user_id = ? AND password = ?";
         try (PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setString(1, instructorID);
             ps.setString(2, password);
