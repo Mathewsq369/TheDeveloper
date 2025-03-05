@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="content">
-            <h1>Welcome ${user}</h1>
+            <h1>Welcome ${user.username}</h1>
             <div class="card">
                 <h3>Level 1 to 5 Class Timetable</h3>
                 <table class="timetable">

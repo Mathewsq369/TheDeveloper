@@ -2,14 +2,16 @@
 package com.studentmanager.servlets;
 
 import java.io.IOException;
+
+import com.studentmanager.models.User;
+import com.studentmanager.services.LoginService;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletResponse;
-
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import com.studentmanager.services.LoginService;
 /**
  *
  * @author s1gm9
@@ -30,10 +32,10 @@ public class loginServlet extends HttpServlet {
         String instructorID = request.getParameter("instructor-id");
         String password = request.getParameter("password");
         LoginService loginService= new LoginService();
-        boolean isvaliduser = loginService.validateuser(instructorID,password);
-        if(isvaliduser){
+        User user=loginService.validateuser(instructorID, password);
+        if(user != null ){
             HttpSession session = request.getSession();
-            session.setAttribute("user",instructorID);
+            session.setAttribute("user",user);
             response.sendRedirect("home.jsp");
         }
         else{

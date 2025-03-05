@@ -4,6 +4,7 @@
  */
 package com.studentmanager.services;
 import com.studentmanager.dao.UserDAO;
+import com.studentmanager.models.User;
 
 /**
  *
@@ -11,7 +12,7 @@ import com.studentmanager.dao.UserDAO;
  */
 public class LoginService
 {
-       public boolean validateuser(String instructorID, String password)
+       public User validateuser(String instructorID, String password)
             {
                 UserDAO userDAO = new UserDAO();
                 return userDAO.checkCredentials(instructorID, password);

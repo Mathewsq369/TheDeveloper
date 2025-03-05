@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.studentmanager.database.DatabaseConnection;
+import com.studentmanager.models.User;
 
 public class UserDAO {
     private Connection con=null;
@@ -14,16 +15,21 @@ public class UserDAO {
         this.con = DatabaseConnection.getConnection();
     }
 
-    public boolean checkCredentials(String instructorID, String password) {
+    public User checkCredentials(String instructorID, String password) {
         String sql = "SELECT * FROM users WHERE user_id = ? AND password = ?";
         try (PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setString(1, instructorID);
             ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
-            return rs.next(); // Returns true if credentials are found
+            if (rs.next()) {
+                String user_id=rs.getString("user_id");
+                String username=rs.getString("username");
+                String dbPassword=rs.getString("password");
+                return new User(user_id,username,dbPassword);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return false;
+        return null;
     }
 }
