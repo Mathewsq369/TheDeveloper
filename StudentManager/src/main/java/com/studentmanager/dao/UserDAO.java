@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import com.studentmanager.database.DatabaseConnection;
 
 public class UserDAO {
-    private Connection con;
+    private Connection con=null;
 
     public UserDAO() {
         this.con = DatabaseConnection.getConnection();
