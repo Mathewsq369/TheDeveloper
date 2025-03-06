@@ -21,26 +21,26 @@
             <h2>Course Manager</h2>
         </div>
         <h3>Register</h3>
-        <form>
+        <form action="registration" method="post">
             <div class="form-group">
                 <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" placeholder="Enter your full name" required>
+                <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email" required>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
                 <label for="instructor-id">Instructor ID</label>
-                <input type="text" id="instructor-id" placeholder="Enter your instructor ID" required>
+                <input type="text" name="instructor_id" id="instructor-id" placeholder="Enter your instructor ID" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password" required>
+                <input type="password" name="password" id="password" placeholder="Enter your password" required>
             </div>
             <div class="form-group">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                <input type="password" name="confirm_password" id="confirm-password" placeholder="Confirm your password" required>
             </div>
             <button type="submit" class="register-button">Register</button>
         </form>
