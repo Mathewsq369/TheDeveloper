@@ -21,16 +21,20 @@ import com.studentmanager.dao.registerDAO;
 public class RegisterServlet extends HttpServlet {
 @Override
 protected void doPost(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
-        String instructorID=request.getParameter("instructor-id");
+        String instructorID=request.getParameter("instructor_id");
         if(instructorID!=null && !instructorID.isEmpty()){
             try{
                 int myInt=Integer.parseInt(instructorID);
                 String fullname=request.getParameter("fullname");
                 String email=request.getParameter("email");
                 String password=request.getParameter("password");
-                String confirmPass=request.getParameter("confirmPassword");
+                String confirmPass=request.getParameter("confirm_password");
                 registerDAO.registerUser(myInt, fullname, email, password, confirmPass);
+<<<<<<< HEAD
                 doGet(request, response);
+=======
+                response.sendRedirect("registration");
+>>>>>>> 13fee2821379c44920a29f7273a9158b77aa3be5
             }catch(NumberFormatException e){
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST,"invalid instructor id format");
                // log.error("Invalid instructorid format",e);

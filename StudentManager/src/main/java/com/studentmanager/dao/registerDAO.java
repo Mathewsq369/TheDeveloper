@@ -25,19 +25,19 @@ public class registerDAO {
             Statement ps=con.createStatement();
             ResultSet rs=ps.executeQuery("SELECT * FROM register")){
             while(rs.next()){
-                registers.add(new RegisterService(rs.getInt("instructorID"),rs.getString("fullname"),rs.getString("email"),rs.getString("password"),rs.getString("confirmPassword")));
+                registers.add(new RegisterService(rs.getInt("instructor_id"),rs.getString("fullname"),rs.getString("email"),rs.getString("password"),rs.getString("confirm_password")));
             }
         }catch(Exception e){
             e.printStackTrace();
         }
         return registers;
     }
-    public static void registerUser(int instructorID,String fullname,String email,String password,String confirmPassword){
+    public static void registerUser(int instructor_id,String fullname,String email,String password,String confirmPassword){
         try{
             Connection con = DatabaseConnection.getConnection();
             String sql="INSERT INTO register(instructor_id,fullname,email,password,confirm_password)values(?,?,?,?,?)";
             PreparedStatement ps=con.prepareStatement(sql);
-            ps.setInt(1,instructorID);
+            ps.setInt(1,instructor_id);
             ps.setString(2,fullname);
             ps.setString(3, email);
             ps.setString(4,password);
