@@ -35,7 +35,7 @@ public class registerDAO {
     public static void registerUser(int instructorID,String fullname,String email,String password,String confirmPassword){
         try{
             Connection con = DatabaseConnection.getConnection();
-            String sql="INSERT INTO register(instructorID,fullname,email,password,confirmPassword)values(?,?,?,?,?)";
+            String sql="INSERT INTO register(instructor_id,fullname,email,password,confirm_password)values(?,?,?,?,?)";
             PreparedStatement ps=con.prepareStatement(sql);
             ps.setInt(1,instructorID);
             ps.setString(2,fullname);

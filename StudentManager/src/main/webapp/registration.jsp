@@ -21,7 +21,7 @@
             <h2>Course Manager</h2>
         </div>
         <h3>Register</h3>
-        <form>
+        <form action="registration" method="post">
             <div class="form-group">
                 <label for="fullname">Full Name</label>
                 <input type="text" id="fullname" placeholder="Enter your full name" required>

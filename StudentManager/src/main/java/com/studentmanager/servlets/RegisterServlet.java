@@ -4,7 +4,6 @@
  */
 package com.studentmanager.servlets;
 
-import com.studentmanager.dao.registerDAO;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -13,12 +12,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.List;
 import com.studentmanager.services.RegisterService;
-
+import com.studentmanager.dao.registerDAO;
 /**
  *
  * @author s1gm9
  */
-@WebServlet(name = "RegisterServlet", urlPatterns = {"/RegisterServlet"})
+@WebServlet(name = "RegisterServlet", urlPatterns = {"/registration"})
 public class RegisterServlet extends HttpServlet {
 @Override
 protected void doPost(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
@@ -31,7 +30,7 @@ protected void doPost(HttpServletRequest request,HttpServletResponse response)th
                 String password=request.getParameter("password");
                 String confirmPass=request.getParameter("confirmPassword");
                 registerDAO.registerUser(myInt, fullname, email, password, confirmPass);
-                response.sendRedirect("registers");
+                doGet(request, response);
             }catch(NumberFormatException e){
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST,"invalid instructor id format");
                // log.error("Invalid instructorid format",e);
