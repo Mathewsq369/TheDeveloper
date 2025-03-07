@@ -15,13 +15,8 @@ public class RegisterService {
     private String password;
     private String confirm_password;
     
-<<<<<<< HEAD
     public RegisterService (int instructorID,String fullname,String email,String password,String confirmPassword){
         this.instructorID=instructorID;
-=======
-    public RegisterService (int instructor_id,String fullname,String email,String password,String confirm_password){
-        this.instructor_id=instructor_id;
->>>>>>> 13fee2821379c44920a29f7273a9158b77aa3be5
         this.fullname=fullname;
         this.email=email;
         this.password=password;
