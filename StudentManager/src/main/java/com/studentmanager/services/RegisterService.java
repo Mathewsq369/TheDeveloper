@@ -9,22 +9,22 @@ package com.studentmanager.services;
  * @author s1gm9
  */
 public class RegisterService {
-    private int instructor_id;
+    private int instructorID;
     private String fullname;
     private String email;
     private String password;
-    private String confirm_password;
+    private String confirmPassword;
     
     public RegisterService (int instructorID,String fullname,String email,String password,String confirmPassword){
         this.instructorID=instructorID;
         this.fullname=fullname;
         this.email=email;
         this.password=password;
-        this.confirm_password = confirm_password;
+        this.confirmPassword = confirmPassword;
     }
-    public int getInstructorId(){return instructor_id;}
+    public int getInstructorId(){return instructorID;}
     public String getFullname(){return fullname;}
     public String getEmail(){ return email;}
     public String getPassword(){return password;}
-    public String getConfirmpassword(){return confirm_password;}
+    public String getConfirmpassword(){return confirmPassword;}
 }

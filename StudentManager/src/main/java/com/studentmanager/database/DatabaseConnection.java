@@ -12,8 +12,8 @@ public class DatabaseConnection {
 
     public static Connection getConnection(){
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection(JDBC_URL,JDBC_USER,JDBC_PASSWORD);
+            Class.forName("org.mariadb.jdbc.Driver");
+            return DriverManager.getConnection(URL,USER,PASSWORD);
         }catch(Exception e){
             e.printStackTrace();
             return null;
