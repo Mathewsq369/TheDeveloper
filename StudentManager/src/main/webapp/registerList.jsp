@@ -31,6 +31,6 @@
             </table>
             <%}%>
             <br>
-            <a href="registration.jsp">Go Back to registration</a>
+            <a href="registration.jsp">Go back to registration</a>
     </body>
 </html>
