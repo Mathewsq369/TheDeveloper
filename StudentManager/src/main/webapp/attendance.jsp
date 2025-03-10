@@ -19,7 +19,7 @@
         <div>
             <div class="logo">
                 <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Logo">
-                <h2>Welcome %{user.username}</h2>
+                <h2>Welcome ${user.username}</h2>
             </div>
             <a href="home.jsp" class="nav-item"><i class="fas fa-tachometer-alt"></i> Home</a>
             <a href="#" class="nav-item active"><i class="fas fa-calendar-check"></i> Attendance Management</a>
@@ -34,6 +34,30 @@
         <div class="card">
             <h3>Mark Attendance</h3>
             <p>Select the date and mark students as present or absent.</p>
+            <form action="AttendanceServlet" method="post">
+                <table>
+                    <tr>
+                        <td>Student_id</td>
+                        <td><input type="text" name="student_id" required</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td><input type="date" name="date" required></td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>
+                            <select name="status" required>
+                                <option value="Present">Present</option>
+                                <option value="Absent">Absent</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Submit Attendance"></td>
+                    </tr>
+                </table>
+            </form>
         </div>
         <div class="card">
             <h3>Attendance History</h3>

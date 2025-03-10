@@ -13,6 +13,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.List;
 import com.studentmanager.services.RegisterService;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
@@ -32,6 +33,9 @@ protected void doPost(HttpServletRequest request,HttpServletResponse response)th
                 String confirmPass=request.getParameter("confirm_password");
                 registerDAO.registerUser(myInt, fullname, email, password, confirmPass);
                 response.sendRedirect("registration");
+                HttpSession session=request.getSession();
+                session.setAttribute("fullname", fullname);
+        
             }catch(NumberFormatException e){
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST,"invalid instructor id format");
                // log.error("Invalid instructorid format",e);
@@ -44,7 +48,6 @@ protected void doPost(HttpServletRequest request,HttpServletResponse response)th
      protected void doGet(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
         List<RegisterService> registerList=registerDAO.getAllregister();
         request.setAttribute("registerList",registerList);
-        
         request.getRequestDispatcher("registerList.jsp").forward(request, response);
     }
 }
