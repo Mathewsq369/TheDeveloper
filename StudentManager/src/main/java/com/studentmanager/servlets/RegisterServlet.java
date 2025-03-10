@@ -11,13 +11,9 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.List;
-import com.studentmanager.services.RegisterService;
-<<<<<<< HEAD
-import com.studentmanager.dao.registerDAO;
-=======
 import jakarta.servlet.http.HttpSession;
-
->>>>>>> 6ced0640e2eeb73f4572c94d50c13537ab5bc663
+import com.studentmanager.services.RegisterService;
+import com.studentmanager.dao.registerDAO;
 /**
  *
  * @author s1gm9
@@ -35,14 +31,11 @@ protected void doPost(HttpServletRequest request,HttpServletResponse response)th
                 String password=request.getParameter("password");
                 String confirmPass=request.getParameter("confirm_password");
                 registerDAO.registerUser(myInt, fullname, email, password, confirmPass);
-<<<<<<< HEAD
-                doGet(request, response);
-=======
-                response.sendRedirect("registration");
                 HttpSession session=request.getSession();
                 session.setAttribute("fullname", fullname);
+                // doGet(request, response);
+                response.sendRedirect("registration");
         
->>>>>>> 6ced0640e2eeb73f4572c94d50c13537ab5bc663
             }catch(NumberFormatException e){
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST,"invalid instructor id format");
                // log.error("Invalid instructorid format",e);

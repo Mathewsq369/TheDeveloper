@@ -34,7 +34,7 @@
         <div class="card">
             <h3>Mark Attendance</h3>
             <p>Select the date and mark students as present or absent.</p>
-            <form action="AttendanceServlet" method="post">
+            <form action="Attendance" method="post">
                 <table>
                     <tr>
                         <td>Student_id</td>
