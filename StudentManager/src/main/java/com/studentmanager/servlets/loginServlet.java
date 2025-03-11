@@ -31,6 +31,12 @@ public class loginServlet extends HttpServlet {
             throws ServletException, IOException {
         String instructorID = request.getParameter("instructor-id");
         String password = request.getParameter("password");
+        // Validate input
+        if (instructorID == null || instructorID.trim().isEmpty() || password == null || password.trim().isEmpty()) {
+            request.setAttribute("errorMessage", "Instructor ID and password are required.");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+            return;
+        }
         LoginService loginService= new LoginService();
         User user=loginService.validateuser(instructorID, password);
         if(user != null ){
@@ -40,7 +46,7 @@ public class loginServlet extends HttpServlet {
         }
         else{
             request.setAttribute("errorMessage","Invalid instructor Id or password");
-            response.sendRedirect("login.jsp");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }
 }
