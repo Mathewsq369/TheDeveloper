@@ -21,7 +21,7 @@
             if (errorMessage != null) {
         %>
             <div class="error-message">
-                <%= errorMessage %>
+                <h3><%= errorMessage %></h3>
             </div>
         <%
         }
