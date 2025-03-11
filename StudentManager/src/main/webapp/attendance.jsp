@@ -24,6 +24,7 @@
             <a href="home.jsp" class="nav-item"><i class="fas fa-tachometer-alt"></i> Home</a>
             <a href="#" class="nav-item active"><i class="fas fa-calendar-check"></i> Attendance Management</a>
             <a href="results.jsp" class="nav-item"><i class="fas fa-chart-bar"></i> Results Management</a>
+            <a href="registration.jsp" class="nav-item"><i class="fas fa-chart-bar"></i> Registration </a>
         </div>
         <div class="settings">
             <a href="settings.jsp" class="nav-item"><i class="fas fa-cog"></i> Settings</a>
