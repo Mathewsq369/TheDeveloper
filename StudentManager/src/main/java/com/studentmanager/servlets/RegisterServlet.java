@@ -17,7 +17,6 @@ import com.studentmanager.dao.registerDAO;
  *
  * @author s1gm9
  */
-@WebServlet(name = "RegisterServlet", urlPatterns = {"/registration"})
 public class RegisterServlet extends HttpServlet {
 @Override
 protected void doPost(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{

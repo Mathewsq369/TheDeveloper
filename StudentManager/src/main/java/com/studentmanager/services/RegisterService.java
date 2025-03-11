@@ -16,7 +16,7 @@ public class RegisterService {
     private String confirm_password;
     
     public RegisterService (int instructorID,String fullname,String email,String password,String confirmPassword){
-        this.instructorID=instructorID;
+        this.instructor_id=instructorID;
         this.fullname=fullname;
         this.email=email;
         this.password=password;
