@@ -62,6 +62,7 @@
         <div class="card">
             <h3>Attendance History</h3>
             <p>View the attendance records for specific students.</p>
+            <p><a href="AttendanceListServlet">View Attendance List</a></p>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
