@@ -6,9 +6,9 @@ import java.sql.DriverManager;
 public class DatabaseConnection {
     private static Connection con = null;
 
-    private static final String URL = "jdbc:mariadb://localhost:3306/StudentManager";
+    private static final String URL = "jdbc:mariadb://localhost:3306student_manager";
     private static final String USER = "root";
-    private static final String PASSWORD = "m9r19db";
+    private static final String PASSWORD = "seth2019";
 
     public static Connection getConnection(){
         try{
