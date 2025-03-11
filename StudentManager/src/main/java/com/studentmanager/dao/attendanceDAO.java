@@ -6,6 +6,7 @@ package com.studentmanager.dao;
 import java.sql.*;
 import com.studentmanager.database.DatabaseConnection;
 import com.studentmanager.services.AttendanceService;
+import java.util.*;
 
 /**
  *
@@ -25,5 +26,18 @@ public class attendanceDAO {
         con.close();
         return rowsInserted;
     }
-    
+    public static List<AttendanceService> getAllAttendance(){
+        List<AttendanceService> attendance=new ArrayList<>();
+        try(
+            Connection con=DatabaseConnection.getConnection();
+            Statement stmt=con.createStatement();
+            ResultSet rs=stmt.executeQuery("SELECT * FROM attendance")){
+            while(rs.next()){
+                attendance.add(new AttendanceService(rs.getString("student_id"),rs.getString("date"),rs.getString("status")));
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return attendance;
+    }
 }

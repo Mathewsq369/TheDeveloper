@@ -19,7 +19,7 @@
         <div>
             <div class="logo">
                 <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Logo">
-                <h2>Welcome ${user.username}</h2>
+                <h2>Course Manager</h2>
             </div>
             <a href="home.jsp" class="nav-item"><i class="fas fa-tachometer-alt"></i> Home</a>
             <a href="#" class="nav-item active"><i class="fas fa-calendar-check"></i> Attendance Management</a>
@@ -63,6 +63,7 @@
         <div class="card">
             <h3>Attendance History</h3>
             <p>View the attendance records for specific students.</p>
+            <p><a href="AttendanceListServlet">View Attendance List</a></p>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
