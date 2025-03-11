@@ -6,13 +6,13 @@ import java.sql.DriverManager;
 public class DatabaseConnection {
     private static Connection con = null;
 
-    private static final String URL = "jdbc:mysql://localhost:3306/student_manager";
+    private static final String URL = "jdbc:mariadb://localhost:3306/student_manager";
     private static final String USER = "root";
-    private static final String PASSWORD = "!Magwach_Sql 254";
+    private static final String PASSWORD = "seth2019";
 
     public static Connection getConnection(){
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("org.mariadb.jdbc.Driver");
             return DriverManager.getConnection(URL,USER,PASSWORD);
         }catch(Exception e){
             e.printStackTrace();
