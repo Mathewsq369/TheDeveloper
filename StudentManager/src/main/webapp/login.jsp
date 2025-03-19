@@ -16,16 +16,7 @@
             <h2>Course Manager</h2>
         </div>
         <!--Display error incase of login error-->
-        <%
-            String errorMessage = (String) request.getAttribute("errorMessage");
-            if (errorMessage != null) {
-        %>
-            <div class="error-message">
-                <h3><%= errorMessage %></h3>
-            </div>
-        <%
-        }
-    %>
+
         <h3>Login</h3>
         <form action="login" method="post">
             <div class="form-group">
@@ -38,6 +29,16 @@
             </div>
             <button type="submit" class="login-button">Login</button>
             <a href="#" class="forgot-password">Forgot Password?</a>
+                    <%
+            String errorMessage = (String) request.getAttribute("errorMessage");
+            if (errorMessage != null) {
+        %>
+        <div class="error-message" >
+                <p style="color: red; font-size: 14px; margin-bottom: 10px; text-align: center;"><%= errorMessage %></p>
+            </div>
+        <%
+        }
+    %>
         </form>
     </div>
 </body>
