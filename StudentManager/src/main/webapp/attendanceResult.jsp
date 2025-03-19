@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,6 +14,23 @@
     </head>
     <body>
         <h1>Attendance Result</h1>
-        <p>${message}</p>
+<p>
+    <% 
+    String studentId = request.getParameter("student_id");
+    String message = (String) request.getAttribute("message");
+
+    if ("Error".equals(message)) {
+    %>
+        An error occurred: Student ID: <%= studentId %> not available
+    <%
+    } else {
+    %>
+        <%= message %>
+    <%
+    } 
+    %>
+</p>
+
+        <a href="attendance.jsp">Go back to attendance</a>
     </body>
 </html>

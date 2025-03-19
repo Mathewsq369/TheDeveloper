@@ -37,7 +37,7 @@ public class AttendanceServlet extends HttpServlet {
                 }
             }catch(SQLException|ClassNotFoundException e){
                         e.printStackTrace();
-                        request.setAttribute("message","An error occured;"+e.getMessage());
+                        request.setAttribute("message","Error");
                       }
                     request.getRequestDispatcher("attendanceResult.jsp").forward(request, response);
                 }
